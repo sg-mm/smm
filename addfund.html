@@ -175,7 +175,7 @@ th{
 
 <p>UPI ID: <b>ravikishanm90@fam</b></p>
 
-<input id="amount" type="number" placeholder="Enter Amount (Min ₹10)">
+<input id="amount" type="number" placeholder="Enter Amount (Min ₹100)">
 <input id="utr" placeholder="Enter UTR / Transaction ID">
 
 <button id="submitBtn" onclick="submitPayment()">Submit Payment</button>
@@ -217,7 +217,7 @@ function submitPayment(){
   const msg=document.getElementById("msg");
   const btn=document.getElementById("submitBtn");
 
-  if(!amount || amount<10){ msg.innerText="Minimum ₹10 required"; return; }
+  if(!amount || amount<100){ msg.innerText="Minimum ₹100 required"; return; }
   if(!utr){ msg.innerText="Enter valid UTR"; return; }
 
   btn.disabled=true;
